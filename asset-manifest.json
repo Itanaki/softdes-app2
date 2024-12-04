@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/softdes-app/static/css/main.2b1f2522.css",
+    "main.js": "/softdes-app/static/js/main.75f57e3f.js",
+    "static/js/453.e5407da2.chunk.js": "/softdes-app/static/js/453.e5407da2.chunk.js",
+    "index.html": "/softdes-app/index.html",
+    "main.2b1f2522.css.map": "/softdes-app/static/css/main.2b1f2522.css.map",
+    "main.75f57e3f.js.map": "/softdes-app/static/js/main.75f57e3f.js.map",
+    "453.e5407da2.chunk.js.map": "/softdes-app/static/js/453.e5407da2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b1f2522.css",
+    "static/js/main.75f57e3f.js"
+  ]
+}
