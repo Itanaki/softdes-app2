@@ -21,7 +21,7 @@ const LandingPage = () => {
       
       <div className="content">
         <div className="logo-container">
-          <img src="/LOGO.png" alt="Fish Silage Tracker Logo" className="app-logo" />
+        <img src={process.env.PUBLIC_URL + '/LOGO.png'} alt="Fish Silage Tracker Logo" className="app-logo" />
         </div>
         <h1 className="app-title">Fish Silage Tracker</h1>
         <p className="app-description">
