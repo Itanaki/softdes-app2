@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Itanaki.github.io/softdes-app",
+  "homepage": "/",
   "name": "web",
   "version": "0.1.0",
   "private": true,
@@ -7,17 +7,21 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "firebase": "^11.0.2",
     "koa": "^2.15.3",
     "koa-bodyparser": "^4.4.1",
     "koa-router": "^13.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^7.0.2",
     "react-scripts": "5.0.1",
+    "recharts": "^2.14.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
+    "dev": "concurrently \"npm run start\" \"node server.js\"",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^9.1.0",
     "gh-pages": "^6.2.0"
   }
 }
