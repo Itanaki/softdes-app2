@@ -1,0 +1,86 @@
+/* src/components/LandingPage/LandingPage.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #141a30; /* Updated background color */
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.header {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  color: #aaa;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header nav ul li {
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.app-logo {
+  width: 400px; /* Adjust size as needed */
+  height: auto;
+}
+
+.app-title {
+  font-size: 2.5em;
+  color: #f0f0f0;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.app-description {
+  font-size: 1.1em;
+  color: #cccccc;
+  max-width: 600px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.get-started-button {
+  padding: 15px 30px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-button:hover {
+  background-color: #0056b3;
+}

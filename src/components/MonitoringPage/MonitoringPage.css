@@ -1,0 +1,483 @@
+.monitoring-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #141a30;
+  color: #ffffff;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  position: relative; /* Allow positioning of background images */
+  overflow: hidden; /* Ensure content does not overflow the viewport */
+  width: 100%; /* Ensure container is full-width */
+  box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+
+.background-left{
+  position: absolute;
+  top: -100;
+  width: 750px; /* Adjust size as needed */
+  height: auto;
+  z-index: 0; /* Keep behind other elements */
+  pointer-events: none; /* Make sure it doesn't block UI interactions */
+}
+.background-right {
+  position: absolute;
+  top: -750;
+  width: 750px; /* Adjust size as needed */
+  height: auto;
+  z-index: 0; /* Keep behind other elements */
+  pointer-events: none; /* Make sure it doesn't block UI interactions */
+}
+
+.background-left {
+  left: 0;
+  transform: translateY(10%);
+}
+
+.background-right {
+  right: 0;
+  transform: translateY(10%);
+}
+
+/* Left decorative image */
+.left-image {
+  position: fixed; /* Use fixed positioning to keep the image outside the content flow */
+  top: 50%;
+  left: -280px; /* Move image further out of the content area */
+  transform: translateY(-50%);
+  width: 800px; /* Adjust size */
+  z-index: 0; /* Ensure it's behind the content */
+  opacity: 0.6; /* Reduce visual prominence */
+  pointer-events: none; /* Prevent interaction issues */
+}
+
+/* Right decorative image */
+.right-image {
+  position: fixed; /* Use fixed positioning to keep the image outside the content flow */
+  top: 50%;
+  right: -280px; /* Move image further out of the content area */
+  transform: translateY(-50%);
+  width: 800px; /* Adjust size */
+  z-index: 0; /* Ensure it's behind the content */
+  opacity: 0.6; /* Reduce visual prominence */
+  pointer-events: none; /* Prevent interaction issues */
+}
+
+@media (max-width: 1050px) {
+  .left-image,
+  .right-image {
+    width: 60px; /* Reduce size on medium screens */
+    left: -30px; /* Adjust positioning */
+    right: -30px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .left-image,
+  .right-image {
+    width: 60px; /* Reduce size on medium screens */
+    left: -30px; /* Adjust positioning */
+    right: -30px;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .left-image,
+  .right-image {
+    width: 60px; /* Reduce size on medium screens */
+    left: -30px; /* Adjust positioning */
+    right: -30px;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1030px) {
+  .left-image,
+  .right-image {
+    width: 60px; /* Reduce size on medium screens */
+    left: -30px; /* Adjust positioning */
+    right: -30px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .left-image,
+  .right-image {
+    width: 60px; /* Reduce size on medium screens */
+    left: -30px; /* Adjust positioning */
+    right: -30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-image,
+  .right-image {
+    width: 50px; /* Further reduce size on smaller screens */
+    left: -20px;
+    right: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-image,
+  .right-image {
+    display: none; /* Completely hide images on very small screens */
+  }
+}
+
+
+
+
+.status-header {
+  background-color: #d1e7dd; /* Light green background */
+  color: #0c5137; /* Dark green text */
+  padding: 15px; /* Add padding for spacing */
+  width: 265%; /* Expand width to 200% */
+  max-width: none; /* Disable the max-width constraint */
+  height: auto; /* Automatically adjust height */
+  margin: 0 auto 20px auto; /* Center the header horizontally */
+  text-align: center; /* Center-align text */
+  border-radius: 8px; /* Add rounded corners */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack date and status vertically */
+  align-items: center; /* Horizontally center the text */
+  justify-content: center; /* Vertically center the text */
+  box-sizing: border-box; /* Include padding in the total width/height */
+  position: relative; /* Ensure transform works relative to its container */
+  left: 50%; /* Shift the element to the right by 50% of its parent's width */
+  transform: translateX(-50%); /* Shift it back to center */
+}
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .status-header {
+    width: 150%; /* Adjust width for medium-sized screens */
+  }
+}
+
+@media (max-width: 1190px) {
+  .status-header {
+    width: 265%; /* Adjust width for medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .status-header {
+    width: 100%; /* Adjust width for smaller screens */
+    font-size: 1.2em; /* Decrease font size */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .status-header {
+    font-size: 1em; /* Further decrease font size */
+    padding: 8px; /* Adjust padding further */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .status-header {
+    font-size: 1em; /* Smaller text for smaller screens */
+    padding: 10px; /* Adjust padding */
+  }
+}
+
+.status-header.online {
+  background-color: #d1e7dd; /* Light green for online */
+  color: #0c5137; /* Text color for online */
+}
+
+.status-header.offline {
+  background-color: #f8d7da; /* Light red for offline */
+  color: #721c24; /* Text color for offline */
+}
+
+.offline-warning {
+  background-color: yellow;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.sensor-card {
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+/* General styling for normal and alert states */
+.sensor-card-blue {
+  background-color: #205375;
+  color: #ffffff;
+}
+
+.sensor-card-red {
+  background-color: #ff4d4d;
+  color: #ffffff;
+}
+
+.monitoring-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.section-container {
+  background-color: #1e2638;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sensor Readings Container */
+.sensor-readings {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sensor-card {
+  background-color: #205375;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Individual Sensor Styles */
+
+/* pH Level Sensor Styles */
+.sensor-card-ph-normal {
+  background-color: #3b5998; /* Dark blue for normal pH level */
+}
+
+.sensor-card-ph-alert {
+  background-color: #ff4d4d; /* Red for out-of-range pH level */
+}
+
+/* Ammonia Sensor Styles */
+.sensor-card-ammonia-normal {
+  background-color: #3b5998; /* Green for normal ammonia level */
+}
+
+.sensor-card-ammonia-alert {
+  background-color: #ff4d4d; /* Orange for out-of-range ammonia level */
+}
+
+/* Temperature Sensor Styles */
+.sensor-card-temperature-normal {
+  background-color: #3b5998; /* Light blue for normal temperature */
+}
+
+.sensor-card-temperature-alert {
+  background-color: #ff4d4d; /* Dark red for out-of-range temperature */
+}
+
+/* Controls Panel */  
+.controls-panel h3 {
+  margin-bottom: 15px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.control-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.control-item p {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.control-buttons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.control-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.mixing-speed-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.mixing-speed-button {
+  flex: 1;
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #007bff;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.mixing-speed-button.active {
+  background-color: #5ba0e9;
+}
+
+.submit-button-container {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin-top: 20px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* History Chart */
+.history-chart {
+  grid-column: span 2; /* Ensures the chart takes up both columns on larger screens */
+}
+
+.history-chart h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .monitoring-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .status-header {
+    font-size: 1.2em;
+  }
+  
+  .submit-button-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .status-header {
+    font-size: 1em;
+  }
+  
+  .controls-panel h3, .history-chart h3 {
+    font-size: 1.2em;
+  }
+  
+  .control-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .control-item p {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0; /* Ensure consistent spacing */
+  }
+  
+  .control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Consistent gap between the buttons */
+    min-width: 120px; /* Ensure enough space for alignment */
+  }
+  
+  .control-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .control-buttons span {
+    text-align: center;
+    width: 50px; /* Add a fixed width for consistency across controls */
+  }
+  
+  
+
+  .mixing-speed-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .mixing-speed-button {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+  
+  .submit-button-container {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+
+.info-button {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  color: #007bff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.info-button:hover {
+  color: #0056b3;
+}
+
+.guideline-popup {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background-color: #394d7c;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 0.9em;
+  width: 100%;
+  z-index: 1;
+}
+
+.controls-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
